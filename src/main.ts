@@ -7,8 +7,6 @@ const rightBtn = document.querySelector('#plus');
 const startBtn = document.querySelector('#start-button');
 const label = document.querySelector('#label');
 
-console.log(label);
-
 leftBtn.addEventListener('click', changeTimer(time, false));
 rightBtn.addEventListener('click', changeTimer(time));
 startBtn.addEventListener('click', () => {
