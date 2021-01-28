@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p{
+    text-align: center;
+}
+
+#timer{
+    background-color: wheat;
+    border-radius: 3px;
+    padding: 20px 80px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.timer-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.start-block{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
