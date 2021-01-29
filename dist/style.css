@@ -2,6 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 h1, p{
@@ -23,6 +29,8 @@ h1, p{
     justify-content: center;
     align-items:center;
     flex-direction: column;
+
+    box-shadow: 0 0 10px  rgb(211, 211, 0);
 }
 
 .timer-block{
@@ -32,6 +40,8 @@ h1, p{
     align-items: center;
     max-width: 300px;
     min-width: 150px;
+
+    font-size: 20px;
 }
 
 #minus, #plus{
@@ -44,6 +54,9 @@ h1, p{
 #minus:hover, #plus:hover{
     background-color:  rgba(255, 255, 255, 0.651);
     cursor: pointer;
+
+    transform: translate(0, -1px);
+    transition: all 0.3s;
 }
 
 #start-button{
@@ -57,6 +70,9 @@ h1, p{
 #start-button:hover{
     cursor: pointer;
     background-color:rgb(184, 255, 151);
+
+    transform: translate(0, -1px);
+    transition: all 0.3s;
 }
 
 .start-block{

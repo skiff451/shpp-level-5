@@ -54,7 +54,7 @@ function startTimer(timeNode: Element, labelNode: Element): void {
             timeNode.innerHTML = '0';
         } else {
             duration.subtract(1, 'seconds');
-            timeNode.innerHTML = `${duration.minutes()}:${duration.seconds()}`
+            timeNode.innerHTML = `${addZero(duration.minutes())}:${addZero(duration.seconds())}`
         }
     }, 1000)
 
@@ -64,4 +64,13 @@ function toggleHideBtns(...btns: Element[]) {
     btns.forEach(item => {
         item.classList.toggle('hide');
     })
+}
+
+function addZero(timeItem: number): string {
+    let number: number|string = timeItem;
+    if (number < 10) {
+        number = `0${number}`
+        return number;
+    }
+    return number.toString();
 }
