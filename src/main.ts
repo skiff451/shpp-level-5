@@ -37,10 +37,6 @@ function startTimer(timeNode: Element, labelNode: Element): void {
         minutes: +timeNode.innerHTML,
     });
 
-    // if (duration.minutes()!==0) {
-
-    // }
-
     labelNode.innerHTML = 'Осталось:';
 
     toggleHideBtns(leftBtn, rightBtn, startBtn);
