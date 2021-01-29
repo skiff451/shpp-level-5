@@ -1,4 +1,3 @@
-// import moment from 'moment';
 import * as moment from 'moment';
 
 const time = document.querySelector('#time');
