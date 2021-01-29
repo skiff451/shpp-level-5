@@ -38,25 +38,29 @@ function startTimer(timeNode: Element, labelNode: Element): void {
         minutes: +timeNode.innerHTML,
     });
 
+    // if (duration.minutes()!==0) {
+
+    // }
+
     labelNode.innerHTML = 'Осталось:';
 
     toggleHideBtns(leftBtn, rightBtn, startBtn);
 
     const onTimer = setInterval(() => {
-        duration.subtract(1, 'seconds');
-        
-        timeNode.innerHTML = `${duration.minutes()}:${duration.seconds()}`
-        
         if (duration.minutes() === 0 && duration.seconds() === 0) {
             clearInterval(onTimer);
             toggleHideBtns(leftBtn, rightBtn, startBtn);
             labelNode.innerHTML = 'Укажите время в минутах';
             timeNode.innerHTML = '0';
+        } else {
+            duration.subtract(1, 'seconds');
+            timeNode.innerHTML = `${duration.minutes()}:${duration.seconds()}`
         }
     }, 1000)
+
 }
 
-function toggleHideBtns(...btns : Element[]) {
+function toggleHideBtns(...btns: Element[]) {
     btns.forEach(item => {
         item.classList.toggle('hide');
     })
